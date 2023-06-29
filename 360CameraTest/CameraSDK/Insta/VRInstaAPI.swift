@@ -234,8 +234,8 @@ private extension VRInstaAPI {
     }
     
     func updateConfiguration() {
-        mediaSession?.expectedVideoResolution = INSMakeVideoResolution(1080, 720, 2)
-        mediaSession?.expectedVideoResolutionSecondary = INSMakeVideoResolution(1080, 720, 2)
+        mediaSession?.expectedVideoResolution = INSVideoResolution2880x2880x30
+        mediaSession?.expectedVideoResolutionSecondary = INSVideoResolution2880x2880x30
         mediaSession?.previewStreamType = INSPreviewStreamTypeWithValue(1)
         mediaSession?.expectedAudioSampleRate = INSAudioSampleRateWithValue(48000)
         mediaSession?.videoStreamEncode = .H264
