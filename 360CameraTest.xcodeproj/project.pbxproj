@@ -1,0 +1,1026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31BF9A1C2A386ECC00991C70 /* VRInstaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF9A1B2A386ECC00991C70 /* VRInstaAPI.swift */; };
+		31BF9A1E2A386EDB00991C70 /* VRThetaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF9A1D2A386EDB00991C70 /* VRThetaAPI.swift */; };
+		31BF9A202A386F1500991C70 /* VRCameraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF9A1F2A386F1500991C70 /* VRCameraAPI.swift */; };
+		31BF9A292A38746600991C70 /* INSCameraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BF9A252A38746600991C70 /* INSCameraSDK.framework */; };
+		31BF9A2D2A38749500991C70 /* INSCameraSDK.framework in Embedded Binaries */ = {isa = PBXBuildFile; fileRef = 31BF9A252A38746600991C70 /* INSCameraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31BF9A312A39B0C800991C70 /* VRRequestCameraDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF9A302A39B0C800991C70 /* VRRequestCameraDataHelper.swift */; };
+		31FAA0D02A2F673500D2B392 /* VROBSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A62AAC2A0A2065003D008E /* VROBSAPI.swift */; };
+		31FAA0D12A2F673500D2B392 /* VRUploadTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3DF512A0B46EE0072318E /* VRUploadTaskModel.swift */; };
+		31FAA0D22A2F673500D2B392 /* VRAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AABE8B2A179CE300B56AC1 /* VRAudioPlayer.swift */; };
+		31FAA0D32A2F673500D2B392 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73BA22A1747CE006F1C1D /* ProgressHUD.swift */; };
+		31FAA0D42A2F673500D2B392 /* VRServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E8C2A0A44E7007B66FD /* VRServiceAPI.swift */; };
+		31FAA0D52A2F673500D2B392 /* VRLocalCrashUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C533C2A0CF3AC007FAE88 /* VRLocalCrashUtil.swift */; };
+		31FAA0D62A2F673500D2B392 /* VRPreviewDownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73B8C2A1655FF006F1C1D /* VRPreviewDownloadVC.swift */; };
+		31FAA0D72A2F673500D2B392 /* VRVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D81F052A11D49500CCB757 /* VRVCExtension.swift */; };
+		31FAA0D82A2F673500D2B392 /* VRColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4361E2A249C6800AB28AC /* VRColorExtension.swift */; };
+		31FAA0D92A2F673500D2B392 /* VRNetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD30022A27794B009C1BA2 /* VRNetObserver.swift */; };
+		31FAA0DA2A2F673500D2B392 /* VRBoostDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C935582A09227B002D6164 /* VRBoostDelegate.swift */; };
+		31FAA0DB2A2F673500D2B392 /* VRMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E8A2A0A44DB007B66FD /* VRMappable.swift */; };
+		31FAA0DC2A2F673500D2B392 /* VRSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E862A0A448B007B66FD /* VRSessionManager.swift */; };
+		31FAA0DD2A2F673500D2B392 /* VRFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31477C3C2A051B3F00A4F6E4 /* VRFileHelper.swift */; };
+		31FAA0DE2A2F673500D2B392 /* VRHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B365662A03A33500094D50 /* VRHomeVC.swift */; };
+		31FAA0DF2A2F673500D2B392 /* VR360CameraCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73B952A165722006F1C1D /* VR360CameraCaptureVC.swift */; };
+		31FAA0E02A2F673500D2B392 /* VRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73BA12A1747CE006F1C1D /* VRProgressHUD.swift */; };
+		31FAA0E12A2F673500D2B392 /* VRLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A62AA82A0A17D0003D008E /* VRLog.swift */; };
+		31FAA0E22A2F673500D2B392 /* VRRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E842A0A4442007B66FD /* VRRequestManager.swift */; };
+		31FAA0E32A2F673500D2B392 /* VRAddTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E962A0A6B29007B66FD /* VRAddTaskModel.swift */; };
+		31FAA0E42A2F673500D2B392 /* VRCommonWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AEC7FC2A1F3E6E003D88D4 /* VRCommonWebVC.swift */; };
+		31FAA0E52A2F673500D2B392 /* VRARKitCaptrueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A5FA52A089AB10044FCFB /* VRARKitCaptrueHelper.swift */; };
+		31FAA0E62A2F673500D2B392 /* VRDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E882A0A44D1007B66FD /* VRDataError.swift */; };
+		31FAA0E72A2F673500D2B392 /* VRImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C533A2A0CD27D007FAE88 /* VRImageHelper.swift */; };
+		31FAA0E82A2F673500D2B392 /* VRPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73B862A1655FF006F1C1D /* VRPreView.swift */; };
+		31FAA0E92A2F673500D2B392 /* VRRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159D3FC2A14D8B000F9D0F7 /* VRRoomModel.swift */; };
+		31FAA0EA2A2F673500D2B392 /* VRDataSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E8E2A0A44EF007B66FD /* VRDataSerialization.swift */; };
+		31FAA0EB2A2F673500D2B392 /* VRCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4361C2A248B9400AB28AC /* VRCountdownCell.swift */; };
+		31FAA0EC2A2F673500D2B392 /* VRServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E922A0A4830007B66FD /* VRServiceURL.swift */; };
+		31FAA0ED2A2F673500D2B392 /* VRARKitCaptrueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B5DA1A2A08974700381E7C /* VRARKitCaptrueVC.swift */; };
+		31FAA0EE2A2F673500D2B392 /* VRHttpOBSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A83A432A1B728500F3ED2E /* VRHttpOBSHelper.swift */; };
+		31FAA0EF2A2F673500D2B392 /* VRUploadParamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159D3FE2A14F5B700F9D0F7 /* VRUploadParamsModel.swift */; };
+		31FAA0F02A2F673500D2B392 /* VRRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E822A0A43F7007B66FD /* VRRequest.swift */; };
+		31FAA0F12A2F673500D2B392 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B365542A03852B00094D50 /* Scene.swift */; };
+		31FAA0F22A2F673500D2B392 /* VROBSInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E942A0A4D59007B66FD /* VROBSInfoModel.swift */; };
+		31FAA0F32A2F673500D2B392 /* VRUserAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31132E902A0A4559007B66FD /* VRUserAccessor.swift */; };
+		31FAA0F42A2F673500D2B392 /* VRAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B365502A03852B00094D50 /* VRAppDelegate.swift */; };
+		31FAA0F52A2F673500D2B392 /* VRThetaSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C73B932A16560A006F1C1D /* VRThetaSdk.swift */; };
+		31FAA0F82A2F673500D2B392 /* OBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A62AAA2A0A1EF4003D008E /* OBS.framework */; };
+		31FAA0FB2A2F673500D2B392 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B20572A1A47D50017808C /* 3.mp3 */; };
+		31FAA0FC2A2F673500D2B392 /* shooting_finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B205B2A1A47D50017808C /* shooting_finish.mp3 */; };
+		31FAA0FD2A2F673500D2B392 /* rxjs.umd.js in Resources */ = {isa = PBXBuildFile; fileRef = 31C73B8B2A1655FF006F1C1D /* rxjs.umd.js */; };
+		31FAA0FE2A2F673500D2B392 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 31B365522A03852B00094D50 /* Scene.sks */; };
+		31FAA0FF2A2F673500D2B392 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 31C73B892A1655FF006F1C1D /* bundle.js */; };
+		31FAA1002A2F673500D2B392 /* upload_finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B20592A1A47D50017808C /* upload_finish.mp3 */; };
+		31FAA1012A2F673500D2B392 /* data_inaccuracy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B205A2A1A47D50017808C /* data_inaccuracy.mp3 */; };
+		31FAA1022A2F673500D2B392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B3655D2A03852C00094D50 /* LaunchScreen.storyboard */; };
+		31FAA1032A2F673500D2B392 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BD2FDE2A271A6D009C1BA2 /* icon-60@3x.png */; };
+		31FAA1042A2F673500D2B392 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B20562A1A47D50017808C /* 2.mp3 */; };
+		31FAA1052A2F673500D2B392 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 31C73B882A1655FF006F1C1D /* index.html */; };
+		31FAA1062A2F673500D2B392 /* shooting_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B20582A1A47D50017808C /* shooting_start.mp3 */; };
+		31FAA1072A2F673500D2B392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B436192A24858600AB28AC /* Main.storyboard */; };
+		31FAA1082A2F673500D2B392 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 31C73B8A2A1655FF006F1C1D /* index.js */; };
+		31FAA1092A2F673500D2B392 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B20552A1A47D50017808C /* 1.mp3 */; };
+		31FAA10A2A2F673500D2B392 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BD2FDF2A271A6D009C1BA2 /* icon-60@2x.png */; };
+		31FAA10B2A2F673500D2B392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B3655B2A03852C00094D50 /* Assets.xcassets */; };
+		31FAA10C2A2F673500D2B392 /* download_finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317B205C2A1A47D50017808C /* download_finish.mp3 */; };
+		31FAA1822A31BBCA00D2B392 /* VRConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FAA1802A31BBCA00D2B392 /* VRConfig.swift */; };
+		31FAA1882A331ED300D2B392 /* 360CameraTest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31FAA1872A331ED300D2B392 /* 360CameraTest-Info.plist */; };
+		717BCF3D5AAFE881F5FAFDEB /* Pods_360CameraTest_Beta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3493A2A873519257CCED9992 /* Pods_360CameraTest_Beta.framework */; };
+		9AD184A3B7ADF02625CD3CBB /* Pods_360CameraTest_Beta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3493A2A873519257CCED9992 /* Pods_360CameraTest_Beta.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31BF9A2A2A38748500991C70 /* Embedded Binaries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				31BF9A2D2A38749500991C70 /* INSCameraSDK.framework in Embedded Binaries */,
+			);
+			name = "Embedded Binaries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		31132E822A0A43F7007B66FD /* VRRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRRequest.swift; sourceTree = "<group>"; };
+		31132E842A0A4442007B66FD /* VRRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRRequestManager.swift; sourceTree = "<group>"; };
+		31132E862A0A448B007B66FD /* VRSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRSessionManager.swift; sourceTree = "<group>"; };
+		31132E882A0A44D1007B66FD /* VRDataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRDataError.swift; sourceTree = "<group>"; };
+		31132E8A2A0A44DB007B66FD /* VRMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRMappable.swift; sourceTree = "<group>"; };
+		31132E8C2A0A44E7007B66FD /* VRServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRServiceAPI.swift; sourceTree = "<group>"; };
+		31132E8E2A0A44EF007B66FD /* VRDataSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRDataSerialization.swift; sourceTree = "<group>"; };
+		31132E902A0A4559007B66FD /* VRUserAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRUserAccessor.swift; sourceTree = "<group>"; };
+		31132E922A0A4830007B66FD /* VRServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRServiceURL.swift; sourceTree = "<group>"; };
+		31132E942A0A4D59007B66FD /* VROBSInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VROBSInfoModel.swift; sourceTree = "<group>"; };
+		31132E962A0A6B29007B66FD /* VRAddTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRAddTaskModel.swift; sourceTree = "<group>"; };
+		313C533A2A0CD27D007FAE88 /* VRImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRImageHelper.swift; sourceTree = "<group>"; };
+		313C533C2A0CF3AC007FAE88 /* VRLocalCrashUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRLocalCrashUtil.swift; sourceTree = "<group>"; };
+		31477C3C2A051B3F00A4F6E4 /* VRFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRFileHelper.swift; sourceTree = "<group>"; };
+		3159D3FC2A14D8B000F9D0F7 /* VRRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRRoomModel.swift; sourceTree = "<group>"; };
+		3159D3FE2A14F5B700F9D0F7 /* VRUploadParamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRUploadParamsModel.swift; sourceTree = "<group>"; };
+		315A5FA52A089AB10044FCFB /* VRARKitCaptrueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRARKitCaptrueHelper.swift; sourceTree = "<group>"; };
+		317B20552A1A47D50017808C /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		317B20562A1A47D50017808C /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		317B20572A1A47D50017808C /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		317B20582A1A47D50017808C /* shooting_start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shooting_start.mp3; sourceTree = "<group>"; };
+		317B20592A1A47D50017808C /* upload_finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = upload_finish.mp3; sourceTree = "<group>"; };
+		317B205A2A1A47D50017808C /* data_inaccuracy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = data_inaccuracy.mp3; sourceTree = "<group>"; };
+		317B205B2A1A47D50017808C /* shooting_finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shooting_finish.mp3; sourceTree = "<group>"; };
+		317B205C2A1A47D50017808C /* download_finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = download_finish.mp3; sourceTree = "<group>"; };
+		31A62AA82A0A17D0003D008E /* VRLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRLog.swift; sourceTree = "<group>"; };
+		31A62AAA2A0A1EF4003D008E /* OBS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OBS.framework; sourceTree = "<group>"; };
+		31A62AAC2A0A2065003D008E /* VROBSAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VROBSAPI.swift; sourceTree = "<group>"; };
+		31A83A432A1B728500F3ED2E /* VRHttpOBSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRHttpOBSHelper.swift; sourceTree = "<group>"; };
+		31AABE8B2A179CE300B56AC1 /* VRAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRAudioPlayer.swift; sourceTree = "<group>"; };
+		31AEC7FC2A1F3E6E003D88D4 /* VRCommonWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCommonWebVC.swift; sourceTree = "<group>"; };
+		31B365502A03852B00094D50 /* VRAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRAppDelegate.swift; sourceTree = "<group>"; };
+		31B365522A03852B00094D50 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		31B365542A03852B00094D50 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		31B3655B2A03852C00094D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31B3655E2A03852C00094D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31B365662A03A33500094D50 /* VRHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRHomeVC.swift; sourceTree = "<group>"; };
+		31B4361A2A24858600AB28AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31B4361C2A248B9400AB28AC /* VRCountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCountdownCell.swift; sourceTree = "<group>"; };
+		31B4361E2A249C6800AB28AC /* VRColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRColorExtension.swift; sourceTree = "<group>"; };
+		31B5D9ED2A065D6B00381E7C /* 360CameraTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "360CameraTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		31B5DA1A2A08974700381E7C /* VRARKitCaptrueVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRARKitCaptrueVC.swift; sourceTree = "<group>"; };
+		31BD2FDE2A271A6D009C1BA2 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
+		31BD2FDF2A271A6D009C1BA2 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
+		31BD30022A27794B009C1BA2 /* VRNetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRNetObserver.swift; sourceTree = "<group>"; };
+		31BD30082A2844D1009C1BA2 /* 360CameraTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 360CameraTest.entitlements; sourceTree = "<group>"; };
+		31BF9A1B2A386ECC00991C70 /* VRInstaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRInstaAPI.swift; sourceTree = "<group>"; };
+		31BF9A1D2A386EDB00991C70 /* VRThetaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRThetaAPI.swift; sourceTree = "<group>"; };
+		31BF9A1F2A386F1500991C70 /* VRCameraAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRCameraAPI.swift; sourceTree = "<group>"; };
+		31BF9A252A38746600991C70 /* INSCameraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = INSCameraSDK.framework; sourceTree = "<group>"; };
+		31BF9A302A39B0C800991C70 /* VRRequestCameraDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRRequestCameraDataHelper.swift; sourceTree = "<group>"; };
+		31C73B862A1655FF006F1C1D /* VRPreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPreView.swift; sourceTree = "<group>"; };
+		31C73B882A1655FF006F1C1D /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		31C73B892A1655FF006F1C1D /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		31C73B8A2A1655FF006F1C1D /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		31C73B8B2A1655FF006F1C1D /* rxjs.umd.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rxjs.umd.js; sourceTree = "<group>"; };
+		31C73B8C2A1655FF006F1C1D /* VRPreviewDownloadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPreviewDownloadVC.swift; sourceTree = "<group>"; };
+		31C73B932A16560A006F1C1D /* VRThetaSdk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRThetaSdk.swift; sourceTree = "<group>"; };
+		31C73B952A165722006F1C1D /* VR360CameraCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VR360CameraCaptureVC.swift; sourceTree = "<group>"; };
+		31C73BA12A1747CE006F1C1D /* VRProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRProgressHUD.swift; sourceTree = "<group>"; };
+		31C73BA22A1747CE006F1C1D /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		31C935582A09227B002D6164 /* VRBoostDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRBoostDelegate.swift; sourceTree = "<group>"; };
+		31D3DF512A0B46EE0072318E /* VRUploadTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRUploadTaskModel.swift; sourceTree = "<group>"; };
+		31D81F052A11D49500CCB757 /* VRVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRVCExtension.swift; sourceTree = "<group>"; };
+		31FAA1122A2F673500D2B392 /* 360CameraTest_Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 360CameraTest_Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FAA1802A31BBCA00D2B392 /* VRConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRConfig.swift; sourceTree = "<group>"; };
+		31FAA1872A331ED300D2B392 /* 360CameraTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "360CameraTest-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3493A2A873519257CCED9992 /* Pods_360CameraTest_Beta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_360CameraTest_Beta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5026BA8CE611C3D79062CD9C /* Pods-360CameraTest_Beta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest_Beta.debug.xcconfig"; path = "Target Support Files/Pods-360CameraTest_Beta/Pods-360CameraTest_Beta.debug.xcconfig"; sourceTree = "<group>"; };
+		53D2B586D9FFF10E15BDCA02 /* Pods_360CameraTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_360CameraTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2914D3EE618FFC8624122A /* Pods-360CameraTest_Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest_Dev.debug.xcconfig"; path = "Target Support Files/Pods-360CameraTest_Dev/Pods-360CameraTest_Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		802A512F8B24C21BD6A47282 /* Pods-360CameraTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest.release.xcconfig"; path = "Target Support Files/Pods-360CameraTest/Pods-360CameraTest.release.xcconfig"; sourceTree = "<group>"; };
+		BED559EAF225ACF3BF38441D /* Pods-360CameraTest_Beta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest_Beta.release.xcconfig"; path = "Target Support Files/Pods-360CameraTest_Beta/Pods-360CameraTest_Beta.release.xcconfig"; sourceTree = "<group>"; };
+		BFD056C1E88DD27B517B468E /* Pods_360CameraTest_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_360CameraTest_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F2AF351269542C511C08FA /* Pods-360CameraTest copy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest copy.debug.xcconfig"; path = "Target Support Files/Pods-360CameraTest copy/Pods-360CameraTest copy.debug.xcconfig"; sourceTree = "<group>"; };
+		DB39A7F469D3EA21ED6AB5B0 /* Pods-360CameraTest_Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest_Dev.release.xcconfig"; path = "Target Support Files/Pods-360CameraTest_Dev/Pods-360CameraTest_Dev.release.xcconfig"; sourceTree = "<group>"; };
+		EE358C03220B34648A222610 /* Pods-360CameraTest copy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest copy.release.xcconfig"; path = "Target Support Files/Pods-360CameraTest copy/Pods-360CameraTest copy.release.xcconfig"; sourceTree = "<group>"; };
+		F0065F71E5F78609EAA9EFC1 /* Pods-360CameraTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-360CameraTest.debug.xcconfig"; path = "Target Support Files/Pods-360CameraTest/Pods-360CameraTest.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31FAA0F62A2F673500D2B392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BF9A292A38746600991C70 /* INSCameraSDK.framework in Frameworks */,
+				31FAA0F82A2F673500D2B392 /* OBS.framework in Frameworks */,
+				717BCF3D5AAFE881F5FAFDEB /* Pods_360CameraTest_Beta.framework in Frameworks */,
+				9AD184A3B7ADF02625CD3CBB /* Pods_360CameraTest_Beta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31132E812A0A41BA007B66FD /* DataAPI */ = {
+			isa = PBXGroup;
+			children = (
+				31E47CD12A11BB7000A3DF49 /* Http */,
+				31E47CD02A11BB5A00A3DF49 /* Service */,
+				31A62AAE2A0A2DCD003D008E /* OBS */,
+			);
+			path = DataAPI;
+			sourceTree = "<group>";
+		};
+		313C533E2A0DDC99007FAE88 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				31BD2FDF2A271A6D009C1BA2 /* icon-60@2x.png */,
+				31BD2FDE2A271A6D009C1BA2 /* icon-60@3x.png */,
+				317B20542A1A47D50017808C /* sounds */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		317B20542A1A47D50017808C /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				317B20552A1A47D50017808C /* 1.mp3 */,
+				317B20562A1A47D50017808C /* 2.mp3 */,
+				317B20572A1A47D50017808C /* 3.mp3 */,
+				317B20582A1A47D50017808C /* shooting_start.mp3 */,
+				317B20592A1A47D50017808C /* upload_finish.mp3 */,
+				317B205A2A1A47D50017808C /* data_inaccuracy.mp3 */,
+				317B205B2A1A47D50017808C /* shooting_finish.mp3 */,
+				317B205C2A1A47D50017808C /* download_finish.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		31A62AAE2A0A2DCD003D008E /* OBS */ = {
+			isa = PBXGroup;
+			children = (
+				31A62AAC2A0A2065003D008E /* VROBSAPI.swift */,
+				31A83A432A1B728500F3ED2E /* VRHttpOBSHelper.swift */,
+			);
+			path = OBS;
+			sourceTree = "<group>";
+		};
+		31A62AAF2A0A2DDF003D008E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				31B436192A24858600AB28AC /* Main.storyboard */,
+				31C935582A09227B002D6164 /* VRBoostDelegate.swift */,
+				31B365502A03852B00094D50 /* VRAppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		31A62AB02A0A2DF9003D008E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				31C9355B2A09DE4D002D6164 /* Scene */,
+				31B365662A03A33500094D50 /* VRHomeVC.swift */,
+				31B5DA1A2A08974700381E7C /* VRARKitCaptrueVC.swift */,
+				315A5FA52A089AB10044FCFB /* VRARKitCaptrueHelper.swift */,
+				31C73B852A1655FF006F1C1D /* CapturePreview */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		31A62AB12A0A2E4A003D008E /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				31C73BA22A1747CE006F1C1D /* ProgressHUD.swift */,
+				31C73BA12A1747CE006F1C1D /* VRProgressHUD.swift */,
+				31132E902A0A4559007B66FD /* VRUserAccessor.swift */,
+				31477C3C2A051B3F00A4F6E4 /* VRFileHelper.swift */,
+				313C533A2A0CD27D007FAE88 /* VRImageHelper.swift */,
+				31A62AA82A0A17D0003D008E /* VRLog.swift */,
+				313C533C2A0CF3AC007FAE88 /* VRLocalCrashUtil.swift */,
+				31D81F052A11D49500CCB757 /* VRVCExtension.swift */,
+				31AABE8B2A179CE300B56AC1 /* VRAudioPlayer.swift */,
+				31B4361E2A249C6800AB28AC /* VRColorExtension.swift */,
+				31BD30022A27794B009C1BA2 /* VRNetObserver.swift */,
+				31AEC7FC2A1F3E6E003D88D4 /* VRCommonWebVC.swift */,
+				31FAA1802A31BBCA00D2B392 /* VRConfig.swift */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		31B365442A03852B00094D50 = {
+			isa = PBXGroup;
+			children = (
+				31B3654F2A03852B00094D50 /* 360CameraTest */,
+				31B3654E2A03852B00094D50 /* Products */,
+				31B5D9ED2A065D6B00381E7C /* 360CameraTest-Bridging-Header.h */,
+				56E00B887FC635D14E806B91 /* Pods */,
+				ED79C3472EAF46B107758F20 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		31B3654E2A03852B00094D50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FAA1122A2F673500D2B392 /* 360CameraTest_Beta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31B3654F2A03852B00094D50 /* 360CameraTest */ = {
+			isa = PBXGroup;
+			children = (
+				31BF9A212A38746600991C70 /* Frameworks */,
+				31BF9A1A2A386E8600991C70 /* CameraSDK */,
+				31FAA1872A331ED300D2B392 /* 360CameraTest-Info.plist */,
+				31BD30082A2844D1009C1BA2 /* 360CameraTest.entitlements */,
+				313C533E2A0DDC99007FAE88 /* Resource */,
+				31D3DF502A0B46D70072318E /* Models */,
+				31132E812A0A41BA007B66FD /* DataAPI */,
+				31A62AAA2A0A1EF4003D008E /* OBS.framework */,
+				31A62AB12A0A2E4A003D008E /* Commom */,
+				31A62AB02A0A2DF9003D008E /* VC */,
+				31A62AAF2A0A2DDF003D008E /* Main */,
+				31B3655B2A03852C00094D50 /* Assets.xcassets */,
+				31B3655D2A03852C00094D50 /* LaunchScreen.storyboard */,
+			);
+			path = 360CameraTest;
+			sourceTree = "<group>";
+		};
+		31BF9A1A2A386E8600991C70 /* CameraSDK */ = {
+			isa = PBXGroup;
+			children = (
+				31BF9A2F2A38864E00991C70 /* Theta */,
+				31BF9A2E2A38864700991C70 /* Insta */,
+				31BF9A1F2A386F1500991C70 /* VRCameraAPI.swift */,
+			);
+			path = CameraSDK;
+			sourceTree = "<group>";
+		};
+		31BF9A212A38746600991C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31BF9A252A38746600991C70 /* INSCameraSDK.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		31BF9A2E2A38864700991C70 /* Insta */ = {
+			isa = PBXGroup;
+			children = (
+				31BF9A1B2A386ECC00991C70 /* VRInstaAPI.swift */,
+			);
+			path = Insta;
+			sourceTree = "<group>";
+		};
+		31BF9A2F2A38864E00991C70 /* Theta */ = {
+			isa = PBXGroup;
+			children = (
+				31C73B932A16560A006F1C1D /* VRThetaSdk.swift */,
+				31BF9A1D2A386EDB00991C70 /* VRThetaAPI.swift */,
+			);
+			path = Theta;
+			sourceTree = "<group>";
+		};
+		31C73B852A1655FF006F1C1D /* CapturePreview */ = {
+			isa = PBXGroup;
+			children = (
+				31C73B872A1655FF006F1C1D /* html */,
+				31C73B952A165722006F1C1D /* VR360CameraCaptureVC.swift */,
+				31B4361C2A248B9400AB28AC /* VRCountdownCell.swift */,
+				31C73B8C2A1655FF006F1C1D /* VRPreviewDownloadVC.swift */,
+				31C73B862A1655FF006F1C1D /* VRPreView.swift */,
+				31BF9A302A39B0C800991C70 /* VRRequestCameraDataHelper.swift */,
+			);
+			path = CapturePreview;
+			sourceTree = "<group>";
+		};
+		31C73B872A1655FF006F1C1D /* html */ = {
+			isa = PBXGroup;
+			children = (
+				31C73B882A1655FF006F1C1D /* index.html */,
+				31C73B892A1655FF006F1C1D /* bundle.js */,
+				31C73B8A2A1655FF006F1C1D /* index.js */,
+				31C73B8B2A1655FF006F1C1D /* rxjs.umd.js */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		31C9355B2A09DE4D002D6164 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				31B365522A03852B00094D50 /* Scene.sks */,
+				31B365542A03852B00094D50 /* Scene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		31D3DF502A0B46D70072318E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31132E942A0A4D59007B66FD /* VROBSInfoModel.swift */,
+				31132E962A0A6B29007B66FD /* VRAddTaskModel.swift */,
+				31D3DF512A0B46EE0072318E /* VRUploadTaskModel.swift */,
+				3159D3FC2A14D8B000F9D0F7 /* VRRoomModel.swift */,
+				3159D3FE2A14F5B700F9D0F7 /* VRUploadParamsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31E47CD02A11BB5A00A3DF49 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				31132E8C2A0A44E7007B66FD /* VRServiceAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		31E47CD12A11BB7000A3DF49 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				31132E8A2A0A44DB007B66FD /* VRMappable.swift */,
+				31132E822A0A43F7007B66FD /* VRRequest.swift */,
+				31132E842A0A4442007B66FD /* VRRequestManager.swift */,
+				31132E862A0A448B007B66FD /* VRSessionManager.swift */,
+				31132E882A0A44D1007B66FD /* VRDataError.swift */,
+				31132E8E2A0A44EF007B66FD /* VRDataSerialization.swift */,
+				31132E922A0A4830007B66FD /* VRServiceURL.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		56E00B887FC635D14E806B91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0065F71E5F78609EAA9EFC1 /* Pods-360CameraTest.debug.xcconfig */,
+				802A512F8B24C21BD6A47282 /* Pods-360CameraTest.release.xcconfig */,
+				D0F2AF351269542C511C08FA /* Pods-360CameraTest copy.debug.xcconfig */,
+				EE358C03220B34648A222610 /* Pods-360CameraTest copy.release.xcconfig */,
+				5026BA8CE611C3D79062CD9C /* Pods-360CameraTest_Beta.debug.xcconfig */,
+				BED559EAF225ACF3BF38441D /* Pods-360CameraTest_Beta.release.xcconfig */,
+				7E2914D3EE618FFC8624122A /* Pods-360CameraTest_Dev.debug.xcconfig */,
+				DB39A7F469D3EA21ED6AB5B0 /* Pods-360CameraTest_Dev.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED79C3472EAF46B107758F20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3493A2A873519257CCED9992 /* Pods_360CameraTest_Beta.framework */,
+				53D2B586D9FFF10E15BDCA02 /* Pods_360CameraTest.framework */,
+				BFD056C1E88DD27B517B468E /* Pods_360CameraTest_Dev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31FAA0CC2A2F673500D2B392 /* 360CameraTest_Beta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FAA10F2A2F673500D2B392 /* Build configuration list for PBXNativeTarget "360CameraTest_Beta" */;
+			buildPhases = (
+				31FAA0CD2A2F673500D2B392 /* [CP] Check Pods Manifest.lock */,
+				31FAA0CE2A2F673500D2B392 /* [CP-User] Run Flutter Build testt Script */,
+				31FAA0CF2A2F673500D2B392 /* Sources */,
+				31FAA0F62A2F673500D2B392 /* Frameworks */,
+				31FAA0FA2A2F673500D2B392 /* Resources */,
+				31FAA10D2A2F673500D2B392 /* [CP] Embed Pods Frameworks */,
+				31FAA10E2A2F673500D2B392 /* [CP-User] Embed Flutter Build testt Script */,
+				31BF9A2A2A38748500991C70 /* Embedded Binaries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 360CameraTest_Beta;
+			productName = 360CameraTest;
+			productReference = 31FAA1122A2F673500D2B392 /* 360CameraTest_Beta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31B365452A03852B00094D50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = VR;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+			};
+			buildConfigurationList = 31B365482A03852B00094D50 /* Build configuration list for PBXProject "360CameraTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31B365442A03852B00094D50;
+			productRefGroup = 31B3654E2A03852B00094D50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31FAA0CC2A2F673500D2B392 /* 360CameraTest_Beta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31FAA0FA2A2F673500D2B392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FAA0FB2A2F673500D2B392 /* 3.mp3 in Resources */,
+				31FAA0FC2A2F673500D2B392 /* shooting_finish.mp3 in Resources */,
+				31FAA1882A331ED300D2B392 /* 360CameraTest-Info.plist in Resources */,
+				31FAA0FD2A2F673500D2B392 /* rxjs.umd.js in Resources */,
+				31FAA0FE2A2F673500D2B392 /* Scene.sks in Resources */,
+				31FAA0FF2A2F673500D2B392 /* bundle.js in Resources */,
+				31FAA1002A2F673500D2B392 /* upload_finish.mp3 in Resources */,
+				31FAA1012A2F673500D2B392 /* data_inaccuracy.mp3 in Resources */,
+				31FAA1022A2F673500D2B392 /* LaunchScreen.storyboard in Resources */,
+				31FAA1032A2F673500D2B392 /* icon-60@3x.png in Resources */,
+				31FAA1042A2F673500D2B392 /* 2.mp3 in Resources */,
+				31FAA1052A2F673500D2B392 /* index.html in Resources */,
+				31FAA1062A2F673500D2B392 /* shooting_start.mp3 in Resources */,
+				31FAA1072A2F673500D2B392 /* Main.storyboard in Resources */,
+				31FAA1082A2F673500D2B392 /* index.js in Resources */,
+				31FAA1092A2F673500D2B392 /* 1.mp3 in Resources */,
+				31FAA10A2A2F673500D2B392 /* icon-60@2x.png in Resources */,
+				31FAA10B2A2F673500D2B392 /* Assets.xcassets in Resources */,
+				31FAA10C2A2F673500D2B392 /* download_finish.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FAA0CD2A2F673500D2B392 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-360CameraTest_Beta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31FAA0CE2A2F673500D2B392 /* [CP-User] Run Flutter Build testt Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build testt Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../vr/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		31FAA10D2A2F673500D2B392 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-360CameraTest_Beta/Pods-360CameraTest_Beta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-360CameraTest_Beta/Pods-360CameraTest_Beta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-360CameraTest_Beta/Pods-360CameraTest_Beta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31FAA10E2A2F673500D2B392 /* [CP-User] Embed Flutter Build testt Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build testt Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../vr/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31FAA0CF2A2F673500D2B392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BF9A312A39B0C800991C70 /* VRRequestCameraDataHelper.swift in Sources */,
+				31FAA0D02A2F673500D2B392 /* VROBSAPI.swift in Sources */,
+				31FAA0D12A2F673500D2B392 /* VRUploadTaskModel.swift in Sources */,
+				31FAA0D22A2F673500D2B392 /* VRAudioPlayer.swift in Sources */,
+				31FAA0D32A2F673500D2B392 /* ProgressHUD.swift in Sources */,
+				31FAA0D42A2F673500D2B392 /* VRServiceAPI.swift in Sources */,
+				31FAA0D52A2F673500D2B392 /* VRLocalCrashUtil.swift in Sources */,
+				31FAA0D62A2F673500D2B392 /* VRPreviewDownloadVC.swift in Sources */,
+				31FAA0D72A2F673500D2B392 /* VRVCExtension.swift in Sources */,
+				31FAA0D82A2F673500D2B392 /* VRColorExtension.swift in Sources */,
+				31FAA0D92A2F673500D2B392 /* VRNetObserver.swift in Sources */,
+				31FAA0DA2A2F673500D2B392 /* VRBoostDelegate.swift in Sources */,
+				31FAA0DB2A2F673500D2B392 /* VRMappable.swift in Sources */,
+				31FAA0DC2A2F673500D2B392 /* VRSessionManager.swift in Sources */,
+				31BF9A202A386F1500991C70 /* VRCameraAPI.swift in Sources */,
+				31FAA0DD2A2F673500D2B392 /* VRFileHelper.swift in Sources */,
+				31FAA0DE2A2F673500D2B392 /* VRHomeVC.swift in Sources */,
+				31FAA0DF2A2F673500D2B392 /* VR360CameraCaptureVC.swift in Sources */,
+				31FAA0E02A2F673500D2B392 /* VRProgressHUD.swift in Sources */,
+				31FAA0E12A2F673500D2B392 /* VRLog.swift in Sources */,
+				31FAA0E22A2F673500D2B392 /* VRRequestManager.swift in Sources */,
+				31FAA0E32A2F673500D2B392 /* VRAddTaskModel.swift in Sources */,
+				31FAA0E42A2F673500D2B392 /* VRCommonWebVC.swift in Sources */,
+				31FAA0E52A2F673500D2B392 /* VRARKitCaptrueHelper.swift in Sources */,
+				31FAA0E62A2F673500D2B392 /* VRDataError.swift in Sources */,
+				31FAA0E72A2F673500D2B392 /* VRImageHelper.swift in Sources */,
+				31FAA0E82A2F673500D2B392 /* VRPreView.swift in Sources */,
+				31FAA0E92A2F673500D2B392 /* VRRoomModel.swift in Sources */,
+				31FAA0EA2A2F673500D2B392 /* VRDataSerialization.swift in Sources */,
+				31FAA0EB2A2F673500D2B392 /* VRCountdownCell.swift in Sources */,
+				31FAA0EC2A2F673500D2B392 /* VRServiceURL.swift in Sources */,
+				31FAA0ED2A2F673500D2B392 /* VRARKitCaptrueVC.swift in Sources */,
+				31FAA0EE2A2F673500D2B392 /* VRHttpOBSHelper.swift in Sources */,
+				31FAA0EF2A2F673500D2B392 /* VRUploadParamsModel.swift in Sources */,
+				31FAA1822A31BBCA00D2B392 /* VRConfig.swift in Sources */,
+				31FAA0F02A2F673500D2B392 /* VRRequest.swift in Sources */,
+				31BF9A1E2A386EDB00991C70 /* VRThetaAPI.swift in Sources */,
+				31FAA0F12A2F673500D2B392 /* Scene.swift in Sources */,
+				31FAA0F22A2F673500D2B392 /* VROBSInfoModel.swift in Sources */,
+				31BF9A1C2A386ECC00991C70 /* VRInstaAPI.swift in Sources */,
+				31FAA0F32A2F673500D2B392 /* VRUserAccessor.swift in Sources */,
+				31FAA0F42A2F673500D2B392 /* VRAppDelegate.swift in Sources */,
+				31FAA0F52A2F673500D2B392 /* VRThetaSdk.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		31B3655D2A03852C00094D50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31B3655E2A03852C00094D50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		31B436192A24858600AB28AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31B4361A2A24858600AB28AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31B365602A03852C00094D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		31B365612A03852C00094D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31FAA1102A2F673500D2B392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5026BA8CE611C3D79062CD9C /* Pods-360CameraTest_Beta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = 360CameraTest/360CameraTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XR3PA4X752;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/360CameraTest",
+					"$(PROJECT_DIR)/360CameraTest/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"BETAVERSION=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant/FlutterPluginRegistrant.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Toast-Swift/Toast_Swift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Toast/Toast.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/aijiaplugin/aijiaplugin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/app_settings/app_settings.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/audioplayers_darwin/audioplayers_darwin.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/camera_avfoundation/camera_avfoundation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/device_info_plus/device_info_plus.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_boost/flutter_boost.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_native_image/flutter_native_image.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/fluttertoast/fluttertoast.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/http_proxy/http_proxy.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/image_gallery_saver/image_gallery_saver.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/motion_sensors/motion_sensors.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/package_info_plus/package_info_plus.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/path_provider_foundation/path_provider_foundation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/permission_handler_apple/permission_handler_apple.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/photo_manager/photo_manager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/sqflite/sqflite.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/theta_client_flutter/theta_client_flutter.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/url_launcher_ios/url_launcher_ios.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/video_player_avfoundation/video_player_avfoundation.framework/Headers\"",
+					"\"$(SRCROOT)/../vr/packages/aijiaplugin/ios/Classes/VRWifiName.swift\"",
+				);
+				INFOPLIST_FILE = "360CameraTest-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "VR相机测试";
+				INFOPLIST_KEY_NSCameraUsageDescription = "如果不允许,您将无法在佳境中使用图像采集等功能。";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "请求获取您的本地网络权限，以便链接全景相机完成图像采集。";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "如果不允许,你将无法在佳境中精确定位房源信息等功能。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "如果不允许,你将无法在佳境中精确定位房源信息等功能。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "此 App 需要您的同意才能读取媒体资料库";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"FlutterPluginRegistrant\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"THETAClient\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-framework",
+					"\"audioplayers_darwin\"",
+					"-framework",
+					"\"flutter_boost\"",
+					"-framework",
+					"\"fluttertoast\"",
+					"-framework",
+					"\"image_gallery_saver\"",
+					"-framework",
+					"\"motion_sensors\"",
+					"-framework",
+					"\"path_provider_foundation\"",
+					"-framework",
+					"\"permission_handler_apple\"",
+					"-framework",
+					"\"shared_preferences_foundation\"",
+					"-framework",
+					"\"sqflite\"",
+					"-framework",
+					"\"theta_client_flutter\"",
+					"-framework",
+					"\"video_player_avfoundation\"",
+					"-force_load",
+					"$(SRCROOT)/360CameraTest/OBS.framework/OBS",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D BETAVERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5i5j.360CameraTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "360CameraTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		31FAA1112A2F673500D2B392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED559EAF225ACF3BF38441D /* Pods-360CameraTest_Beta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = 360CameraTest/360CameraTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XR3PA4X752;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/360CameraTest",
+					"$(PROJECT_DIR)/360CameraTest/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"BETAVERSION=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "360CameraTest-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "VR相机测试";
+				INFOPLIST_KEY_NSCameraUsageDescription = "如果不允许,您将无法在佳境中使用图像采集等功能。";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "请求获取您的本地网络权限，以便链接全景相机完成图像采集。";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "如果不允许,你将无法在佳境中精确定位房源信息等功能。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "如果不允许,你将无法在佳境中精确定位房源信息等功能。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "此 App 需要您的同意才能读取媒体资料库";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"FlutterPluginRegistrant\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"THETAClient\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-framework",
+					"\"audioplayers_darwin\"",
+					"-framework",
+					"\"flutter_boost\"",
+					"-framework",
+					"\"fluttertoast\"",
+					"-framework",
+					"\"image_gallery_saver\"",
+					"-framework",
+					"\"motion_sensors\"",
+					"-framework",
+					"\"path_provider_foundation\"",
+					"-framework",
+					"\"permission_handler_apple\"",
+					"-framework",
+					"\"shared_preferences_foundation\"",
+					"-framework",
+					"\"sqflite\"",
+					"-framework",
+					"\"theta_client_flutter\"",
+					"-framework",
+					"\"video_player_avfoundation\"",
+					"-force_load",
+					"$(SRCROOT)/360CameraTest/OBS.framework/OBS",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D BETAVERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5i5j.360CameraTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "360CameraTest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31B365482A03852B00094D50 /* Build configuration list for PBXProject "360CameraTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B365602A03852C00094D50 /* Debug */,
+				31B365612A03852C00094D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FAA10F2A2F673500D2B392 /* Build configuration list for PBXNativeTarget "360CameraTest_Beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FAA1102A2F673500D2B392 /* Debug */,
+				31FAA1112A2F673500D2B392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31B365452A03852B00094D50 /* Project object */;
+}
