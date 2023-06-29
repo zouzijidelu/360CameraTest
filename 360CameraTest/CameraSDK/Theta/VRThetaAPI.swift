@@ -36,22 +36,52 @@ class VRThetaAPI {
         }
     }
     
-    func takePhoto(success: @escaping (String)->(),failed:  @escaping  (Error)->()) async {
+    func takePhoto(_ isTimelapse: Bool = false,success: @escaping (String)->(),failed:  @escaping  (Error)->()) async {
         printLog("real takePhoto --- ")
         do {
             VRProgressHUD.show(shortText: "拍摄中")
             self.initStartCaptureTimer()
             self.previewing = false
+            stopCaptureVideo(isTimelapse, completion: nil)
+            sleep(20)
             try await theta.takePicture { [self]photoUrl in
                 self.startCaptureTimer?.invalidate()
                 self.isTakingPic = false
                 success(photoUrl)
+                Task {
+                    do {
+                        try await capture(success: success, failed: failed)
+                    }catch{
+                        sleep(1)
+                        Task {
+                            try await capture(success: success, failed: failed)
+                        }
+                    }
+                }
             }
         } catch {
             isTakingPic = false
             previewing = true
             startCaptureTimer?.invalidate()
             failed(error)
+            await takePhoto(success: success, failed: failed)
+        }
+    }
+    
+    func capture(success: @escaping (String)->(),failed:  @escaping  (Error)->()) async throws {
+        try await theta.captrueVideo { url in
+            printLog("captrueVideo --- \(url)")
+            DispatchQueue.global().async {
+                let savePath = VRFileHelper.getPanoVideoPathUrl()?.path
+                VRRequestCameraDataHelper.shared.requestDataFromCamera(urlStr:theta.caputureUrl,savePath: savePath) { _, _ in
+//                    Task {
+//                        await self.takePhoto(success: success, failed: failed)
+//                    }
+                    
+                } failed: { err in
+                    failed(err!)
+                }
+            }
         }
     }
         
@@ -66,5 +96,7 @@ class VRThetaAPI {
         });
     }
     
-    
+    func stopCaptureVideo(_ isTimelapse: Bool = false,completion: (()->())? = nil) {
+        theta.stopCapture()
+    }
 }

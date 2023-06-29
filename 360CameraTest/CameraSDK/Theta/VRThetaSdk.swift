@@ -18,11 +18,14 @@ typealias ThetaFileType = ThetaRepository.FileTypeEnum
 let theta = VRThetaSdk()
 enum ThetaError : Error {
   case onError(String)
+    case servieUnvailiable(String)
 }
 class VRThetaSdk {
     static let endPoint: String = "http://192.168.1.1"
     var thetaRepository: ThetaRepository? = nil
     var lastInfo: ThetaInfo? = nil
+    var capturing: VideoCapturing?
+    var caputureUrl: String?
 
     func initialize() async throws {
         if (thetaRepository != nil) {
@@ -38,7 +41,7 @@ class VRThetaSdk {
                 if let response = resp {
                     continuation.resume(returning: response)
                     //todo 发送消息给flutter 链接成功
-                    
+    
                 }
                 if let thetaError = error {
                     continuation.resume(throwing: thetaError)
@@ -156,6 +159,7 @@ class VRThetaSdk {
             }
         }
         let photoUrl: String = try await withCheckedThrowingContinuation {continuation in
+            sleep(1)
             photoCapture.takePicture(
               callback: Callback {fileUrl, error in
                   if let photoUrl = fileUrl {
@@ -170,6 +174,58 @@ class VRThetaSdk {
             )
         }
         callback(photoUrl)
+    }
+    
+    func captrueVideo(_ callback: @escaping (_ url: String) -> Void) async throws {
+        try await initialize()
+        let videoCapture: VideoCapture = try await withCheckedThrowingContinuation({ continuation in
+            thetaRepository!.getVideoCaptureBuilder().build { capture, error in
+                if let photoCapture = capture {
+                    print("thetaRepository captrueVideo")
+                    continuation.resume(returning: photoCapture)
+                }
+                if let thetaError = error {
+                    continuation.resume(throwing: thetaError)
+                    print("thetaRepository captrueVideo thetaError --- \(thetaError)")
+                }
+            }
+        })
+        
+        class Callback: VideoCaptureStartCaptureCallback {
+            let callback: (_ url: String?, _ error: Error?) -> Void
+            init(_ callback: @escaping (_ url: String?, _ error: Error?) -> Void) {
+                self.callback = callback
+            }
+            func onSuccess(fileUrl: String) {
+                print("onSuccess")
+                callback(fileUrl, nil)
+            }
+            func onError(exception: ThetaException) {
+                print("onError -- \(exception.description())")
+                let unauailable = ThetaError.servieUnvailiable(exception.description())
+                callback(nil, unauailable)
+            }
+        }
+        let videoUrl: String = try await withCheckedThrowingContinuation {continuation in
+            sleep(1)
+              capturing = videoCapture.startCapture(callback: Callback {fileUrl, error in
+                if let photoUrl = fileUrl {
+                    print("callback videoUrl")
+                    continuation.resume(returning: photoUrl)
+                }
+                if let thetaError = error {
+                    print("callback thetaError --- \(thetaError)")
+                    continuation.resume(throwing: thetaError)
+                }
+            })
+        }
+        caputureUrl = videoUrl
+        callback(videoUrl)
+    }
+    
+    func stopCapture() {
+        capturing?.stopCapture()
+        capturing = nil
     }
 }
 

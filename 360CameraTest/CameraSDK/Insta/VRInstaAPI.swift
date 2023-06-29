@@ -34,9 +34,9 @@ class VRInstaAPI: NSObject {
         //runMediaSession()
     }
     
-    func takePhoto(success: @escaping (String)->(),failed:  @escaping  (Error)->()) async {
+    func takePhoto(_ isTimelapse: Bool = false,success: @escaping (String)->(),failed:  @escaping  (Error)->()) async {
         printLog("拍摄流程 real takePhoto --- ")
-        stopCaptureVideo {
+        stopCaptureVideo(isTimelapse) {
             let metaData = INSExtraMetadata()
             metaData.rawCaptureType = .pureshot
             let extraInfo = INSExtraInfo()
@@ -49,44 +49,28 @@ class VRInstaAPI: NSObject {
                     failed(error!)
                     return
                 }
-                self.startCaptureVideo()
+                self.startCaptureVideo(isTimelapse)
                 success("http://192.168.42.1:80\(urlStr)")
             }
         }
         
     }
     
-    func stopCaptureVideo(completion: @escaping ()->()) {
+    func stopCaptureVideo(_ isTimelapse: Bool = false,completion: @escaping ()->()) {
         mediaSession?.stopRunning() {_ in
             self.runMediaSession()
         }
         if self.storageState?.cardState == .normal {
             Task {
-                INSCameraManager.shared().commandManager.stopCapture(with: nil) { err, stopHDRVideoInfo in
-                    if err == nil, let url = stopHDRVideoInfo?.uri {
-                        print("拍摄流程 stopHDRVideo success info uri--- \(String(describing: stopHDRVideoInfo?.uri))")
-                        let savePath = VRFileHelper.getPanoVideoPathUrl()?.path
-                        DispatchQueue.global().async {
-                            VRRequestCameraDataHelper.shared.requestDataFromCamera(urlStr: "http://192.168.42.1:80\(url)",savePath: savePath) { _, _ in
-                                var secondURl = ""
-                                if url.contains("_10_") {
-                                    secondURl = url.replacingOccurrences(of: "_10_", with: "_00_")
-                                } else {
-                                    secondURl = url.replacingOccurrences(of: "_00_", with: "_10_")
-                                }
-                                
-                                VRRequestCameraDataHelper.shared.requestDataFromCamera(urlStr: "http://192.168.42.1:80\(secondURl)",savePath: savePath) { _, _ in
-                                    completion()
-                                } failed: { err in
-                                    completion()
-                                }
-                            } failed: { err in
-                                completion()
-                            }
-                        }
-                    } else {
-                        completion()
-                        printLog("拍摄流程 stopHDRVideo failed err --- \(err.debugDescription)")
+                let defaultInfo = INSExtraInfo()
+                let options = INSStopCaptureTimelapseOptions(extraInfo: defaultInfo, mode: .video)
+                if isTimelapse {
+                    INSCameraManager.shared().commandManager.stopCaptureTimelapse(with:options, completion:{ (err, stopVideoInfo) in
+                        self.stopResult(err: err, stopVideoInfo: stopVideoInfo, completion: completion)
+                    })
+                } else {
+                    INSCameraManager.shared().commandManager.stopCapture(with: nil) { err, stopVideoInfo in
+                        self.stopResult(err: err, stopVideoInfo: stopVideoInfo, completion: completion)
                     }
                 }
             }
@@ -94,21 +78,60 @@ class VRInstaAPI: NSObject {
             completion()
         }
     }
+    
+    func stopResult(err: Error?, stopVideoInfo: INSCameraVideoInfo?,completion: @escaping ()->()) {
+        if err == nil, let url = stopVideoInfo?.uri {
+            print("拍摄流程 success info uri--- \(String(describing: stopVideoInfo?.uri))")
+            let savePath = VRFileHelper.getPanoVideoPathUrl()?.path
+            DispatchQueue.global().async {
+                VRRequestCameraDataHelper.shared.requestDataFromCamera(urlStr: "http://192.168.42.1:80\(url)",savePath: savePath) { _, _ in
+                    var secondURl = ""
+                    if url.contains("_10_") {
+                        secondURl = url.replacingOccurrences(of: "_10_", with: "_00_")
+                    } else {
+                        secondURl = url.replacingOccurrences(of: "_00_", with: "_10_")
+                    }
+
+                    VRRequestCameraDataHelper.shared.requestDataFromCamera(urlStr: "http://192.168.42.1:80\(secondURl)",savePath: savePath) { _, _ in
+                        completion()
+                    } failed: { err in
+                        completion()
+                    }
+                } failed: { err in
+                    completion()
+                }
+            }
+        } else {
+            completion()
+            printLog("拍摄流程 failed err --- \(err.debugDescription)")
+        }
+    }
         
-    func startCaptureVideo() {
+    func startCaptureVideo(_ isTimelapse: Bool = false) {
         mediaSession?.stopRunning() {_ in
             self.runMediaSession()
         }
         if self.storageState?.cardState == .normal {
             Task {
-               
-                //try await INSCameraManager.shared().commandManager.startCapture(with:INSCaptureOptions())
-                //INSCameraManager.shared().currentCamera?.settings?.mediaOffset = INSLensOffset(offset: <#T##String#>)
-                INSCameraManager.shared().commandManager.startCapture(with: nil) {error in
-                    if error == nil {
-                        printLog("拍摄流程 startHDRVideo success --- ")
-                    } else {
-                        printLog("拍摄流程 startHDRVideo failed --- \(error.debugDescription)")
+                if isTimelapse {
+                    let defaultInfo = INSExtraInfo()
+                    let options = INSStartCaptureTimelapseOptions(extraInfo: defaultInfo, mode: .video)
+                    options.timelapseOptions?.duration = 3600
+                    options.timelapseOptions?.lapseTime = 500
+                    INSCameraManager.shared().commandManager.startCaptureTimelapse(with: options, completion:{err in
+                        if err == nil {
+                            printLog("拍摄流程 startCaptureTimelapse success --- ")
+                        } else {
+                            printLog("拍摄流程 startCaptureTimelapse failed --- \(err.debugDescription)")
+                        }
+                    })
+                } else {
+                    INSCameraManager.shared().commandManager.startCapture(with: nil) {err in
+                        if err == nil {
+                            printLog("拍摄流程 startHDRVideo success --- ")
+                        } else {
+                            printLog("拍摄流程 startHDRVideo failed --- \(err.debugDescription)")
+                        }
                     }
                 }
             }

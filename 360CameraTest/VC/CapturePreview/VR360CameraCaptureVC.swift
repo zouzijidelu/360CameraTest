@@ -21,10 +21,11 @@ class FileItem:Identifiable {
 
 let ThetaUnavailableError = "Service Unavailable"
 class VR360CameraCaptureVC: UIViewController {
-    var thetaAPI: VRInstaAPI!
+    var thetaAPI: VRThetaAPI!
     var isActive = false
     var item: FileItem?
     var collectionData: [String] = ["5秒","15秒","30秒"]
+    @IBOutlet weak var fpsBtn: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
@@ -66,6 +67,9 @@ class VR360CameraCaptureVC: UIViewController {
         }
     }
     
+    @IBAction func fpsBtnClick(_ sender: Any) {
+        fpsBtn.isSelected = !fpsBtn.isSelected
+    }
     deinit {
         printLog("VR360CameraCaptureVC deinit")
     }
@@ -75,8 +79,28 @@ class VR360CameraCaptureVC: UIViewController {
 extension VR360CameraCaptureVC {
     override func viewDidLoad() {
         super.viewDidLoad()
-        thetaAPI = VRInstaAPI(previewFrame: self.previewView.bounds)
+        thetaAPI = VRThetaAPI()
         audioPlayer = VRAudioPlayer()
+        initUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.thetaAPI.INSCameraManagerSocketSetup()
+        self.thetaAPI.previewing = true
+        self.livePreview()
+        if let title = flutterPamrams?["title"] as? String {
+            titleLabel.text = title
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.thetaAPI.previewing = false
+            thetaAPI.startCaptureTimer?.invalidate()
+    }
+    
+    func initUI() {
         countDownBGView.isHidden = true
         countdownCollection.backgroundColor = .clear
         let image = UIImage(named: "countdownBg")
@@ -90,22 +114,8 @@ extension VR360CameraCaptureVC {
         timeCount = self.staticCount
         secondLabel.text = "\(self.staticCount)"
         countdownBtnLabel.text = secondLabel.text
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.thetaAPI.INSCameraManagerSocketSetup()
-        self.thetaAPI.previewing = true
-        self.livePreview()
-        if let title = flutterPamrams?["title"] as? String {
-            titleLabel.text = title
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.thetaAPI.previewing = false
-            thetaAPI.startCaptureTimer?.invalidate()
+        fpsBtn.setTitle("不允许间隔采样", for:  .normal)
+        fpsBtn.setTitle("允许间隔采样", for: .selected)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -197,7 +207,8 @@ fileprivate extension VR360CameraCaptureVC {
                 self.resetTimeData()
                 VRProgressHUD.show(shortText: "拍摄中。。。")
                 Task.init {
-                    await self.thetaAPI.takePhoto {photoUrl in
+                    printLog("thetaAPI.takePhoto")
+                    await self.thetaAPI.takePhoto(self.fpsBtn.isSelected) {photoUrl in
                         
                         let parts = photoUrl.components(separatedBy: "/")
                         self.item = FileItem(

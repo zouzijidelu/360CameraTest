@@ -31,16 +31,16 @@ class VRRequestCameraDataHelper {
                 failed(error)
                 return
             }
-            var origianlName = "\(tempName)".replacingOccurrences(of: "insp", with: "jpg")
+            var origianlName = "\(tempName)"
             let path = savePath.appending("/\(origianlName)")
             let parser = INSImageInfoParser(data: data)
             var photoData: Data? = data
-            if urlStr.contains("insp"), parser.open() {
-                let origin = UIImage(data: data)
-                let outputSize = parser.extraInfo?.metadata?.dimension
-                let output = self.stitch(image: origin, extraInfo: parser.extraInfo, outputSize: outputSize)
-                photoData = output?.pngData()
-            }
+//            if urlStr.contains("insp"), parser.open() {
+//                let origin = UIImage(data: data)
+//                let outputSize = parser.extraInfo?.metadata?.dimension
+//                let output = self.stitch(image: origin, extraInfo: parser.extraInfo, outputSize: outputSize)
+//                photoData = output?.pngData()
+//            }
         
             if VRImageHelper.saveData(data: photoData, filePath: path) {
                 printLog("拍摄流程 360camera request data success --- \(url)")

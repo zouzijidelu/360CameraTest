@@ -13,7 +13,7 @@
         <!--Camera CaptureVC-->
         <scene sceneID="QSw-KI-s19">
             <objects>
-                <viewController storyboardIdentifier="VR360CameraCaptureVC" id="hUT-j4-MiY" customClass="VR360CameraCaptureVC" customModule="佳境" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VR360CameraCaptureVC" id="hUT-j4-MiY" customClass="VR360CameraCaptureVC" customModule="_60CameraTest_Beta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C98-1v-CWo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VRCountdownCell" id="sTo-LC-DNi" customClass="VRCountdownCell" customModule="佳境" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VRCountdownCell" id="sTo-LC-DNi" customClass="VRCountdownCell" customModule="_60CameraTest_Beta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="-40" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y0Q-An-gWE">
@@ -171,6 +171,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C9-pb-miw">
+                                <rect key="frame" x="0.0" y="409" width="170" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="不允许间隔采样"/>
+                                <connections>
+                                    <action selector="fpsBtnClick:" destination="hUT-j4-MiY" eventType="touchUpInside" id="CZF-5n-zHT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O0R-n1-Nsz"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -207,6 +217,7 @@
                         <outlet property="countdownBtnLabel" destination="w5a-QT-kSf" id="AuM-G0-U9N"/>
                         <outlet property="countdownCollection" destination="v6A-cz-7JV" id="dzY-HL-SX2"/>
                         <outlet property="countdownIV" destination="JaF-uK-cny" id="q48-2u-47Y"/>
+                        <outlet property="fpsBtn" destination="3C9-pb-miw" id="myQ-1E-KPi"/>
                         <outlet property="previewView" destination="UBb-bi-rpd" id="ho2-km-mMI"/>
                         <outlet property="secondLabel" destination="2Xp-qp-S18" id="jyj-cV-p3e"/>
                         <outlet property="titleLabel" destination="Jtv-J1-cFp" id="woX-Nm-t88"/>
@@ -227,6 +238,9 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
