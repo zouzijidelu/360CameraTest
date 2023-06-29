@@ -29,6 +29,7 @@ enum VRFlutterEventName: String {
     case unsavedPath
     case get360CameraStatus
     case uploadHouseImage
+    
 }
 
 enum VREventDicKey: String {
