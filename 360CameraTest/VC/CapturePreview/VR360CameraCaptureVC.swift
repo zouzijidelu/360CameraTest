@@ -21,7 +21,7 @@ class FileItem:Identifiable {
 
 let ThetaUnavailableError = "Service Unavailable"
 class VR360CameraCaptureVC: UIViewController {
-    var thetaAPI: VRThetaAPI!
+    var thetaAPI: VRInstaAPI!
     var isActive = false
     var item: FileItem?
     var collectionData: [String] = ["5秒","15秒","30秒"]
@@ -79,14 +79,14 @@ class VR360CameraCaptureVC: UIViewController {
 extension VR360CameraCaptureVC {
     override func viewDidLoad() {
         super.viewDidLoad()
-        thetaAPI = VRThetaAPI()
+        thetaAPI = VRInstaAPI(previewFrame: self.previewView.bounds)
         audioPlayer = VRAudioPlayer()
         initUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.thetaAPI.INSCameraManagerSocketSetup()
+        self.thetaAPI.INSCameraManagerSocketSetup()
         self.thetaAPI.previewing = true
         self.livePreview()
         if let title = flutterPamrams?["title"] as? String {
